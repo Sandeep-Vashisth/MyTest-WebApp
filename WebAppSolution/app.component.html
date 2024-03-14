@@ -1,0 +1,34 @@
+<h3>Rewardpoint process <Details></Details></h3>
+<form #inputData="ngForm">
+    <!-- <div class="form-group">
+        <input  id="dateOfBirth" name="dateOfBirth" [(ngModel)]="date" type="text" class="form-control">        
+    </div> -->
+    <div class="form-group">
+        <label>Price</label>
+        <input  id="price" name="price" [(ngModel)]="price" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <button type="submit" color="primary" (click)="SendInputData(price)">Calculate</button> 
+    </div>
+</form>
+<!-- {{inputData.value | json}} -->
+
+<div style="text-align: top center">
+<table className="Customer" align="center" border="1">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Rewards</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let item of dataList">
+           <td>{{item.date}}</td>
+           <td>{{item.price}}</td>
+           <td>{{item.reward}}</td>           
+        </tr>
+    </tbody>   
+   
+</table>
+</div>
